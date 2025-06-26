@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tanjibur Rahman - Professional 3D Visualization Artist with over 4 years of experience in Blender, Cinema4D, After Effects, Photoshop & Illustrator.">
+  <title>Tanjibur Rahman | 3D Artist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">🌙</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Tanjibur Rahman</h1>
+      <p>3D Visualization Artist • 4+ Years Experience</p>
+      <a href="#portfolio" class="btn">View My Work</a> 
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm a professional 3D visualization artist with over 4 years of experience crafting stunning visuals using tools like Blender, Cinema 4D, After Effects, Photoshop, and Illustrator. I've worked with more than 1,000 clients globally, delivering high-quality results that exceed expectations.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="blender">Blender</button>
+        <button class="filter-btn" data-filter="cinema4d">Cinema 4D</button>
+        <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+      </div>
+      <div class="gallery">
+        <div class="item blender"><img src="assets/images/work1.jpg" alt="Work 1" onclick="openModal('work1.jpg', 'Blender Scene')"></div>
+        <div class="item cinema4d"><img src="assets/images/work2.jpg" alt="Work 2" onclick="openModal('work2.jpg', 'Cinema 4D Animation')"></div>
+        <div class="item motion"><img src="assets/images/work3.jpg" alt="Work 3" onclick="openModal('work3.jpg', 'After Effects Project')"></div>
+        <div class="item blender"><model-viewer src="assets/models/sample.glb" camera-controls auto-rotate alt="3D Model"></model-viewer></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form action="mailto:tr.rahman123@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tanjibur Rahman. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
